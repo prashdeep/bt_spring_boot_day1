@@ -2,6 +2,7 @@ package com.bt.itemmgmt.dao;
 
 import com.bt.itemmgmt.model.Item;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository("inMemory")
-@Primary
+//@Profile("qa")
 public class InMemoryItemDaoImpl implements ItemDao {
 
     private List<Item> itemlist = new ArrayList<>();

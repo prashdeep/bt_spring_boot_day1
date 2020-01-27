@@ -1,12 +1,14 @@
 package com.bt.itemmgmt.dao;
 
 import com.bt.itemmgmt.model.Item;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository("h2DAO")
+@Profile("dev")
 public class H2DaoImpl implements ItemDao {
 
     @Override

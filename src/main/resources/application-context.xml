@@ -16,6 +16,15 @@
 
     <bean id="itemDAO" class="com.bt.itemmgmt.dao.InMemoryItemDaoImpl"/>-->
 
-    <bean class="com.bt.itemmgmt.config.CustomBeanPostProcessor" />
+    <!--<bean class="com.bt.itemmgmt.config.CustomBeanPostProcessor" />
+
+    <beans profile="qa">
+        <bean id="itemDAO" class="com.bt.itemmgmt.dao.H2DaoImpl"/>
+    </beans>
+
+    <beans profile="dev">
+        <bean id="itemDAO" class="com.bt.itemmgmt.dao.InMemoryItemDaoImpl"/>
+    </beans>-->
+
 
 </beans>

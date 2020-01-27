@@ -1,8 +1,14 @@
 package com.bt.itemmgmt.model;
 
-import java.io.Serializable;
-import java.util.Objects;
+import lombok.*;
 
+import java.io.Serializable;
+
+@Setter
+@Getter
+@ToString
+@EqualsAndHashCode(of = "itemId")
+@Builder
 public class Item implements Serializable, Comparable<Item> {
 
     private long itemId;
@@ -13,7 +19,7 @@ public class Item implements Serializable, Comparable<Item> {
 
     private String description;
 
-    public Item(){
+   /* public Item(){
 
     }
 
@@ -70,7 +76,7 @@ public class Item implements Serializable, Comparable<Item> {
     @Override
     public int hashCode() {
         return Objects.hash(itemId);
-    }
+    }*/
 
     @Override
     public int compareTo(Item item) {

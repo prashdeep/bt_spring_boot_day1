@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="itemService" class="com.bt.itemmgmt.service.ItemServiceImpl">
+
+    <!--<context:annotation-config />-->
+    <context:component-scan base-package="com.bt.itemmgmt" />
+   <!--<bean id="itemService" class="com.bt.itemmgmt.service.ItemServiceImpl">
         <constructor-arg ref="itemDAO"/>
     </bean>
 
-    <bean id="itemDAO" class="com.bt.itemmgmt.dao.InMemoryItemDaoImpl"/>
+    <bean id="itemDAO" class="com.bt.itemmgmt.dao.InMemoryItemDaoImpl"/>-->
+
+    <bean class="com.bt.itemmgmt.config.CustomBeanPostProcessor" />
 
 </beans>

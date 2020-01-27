@@ -1,12 +1,16 @@
 package com.bt.itemmgmt.dao;
 
 import com.bt.itemmgmt.model.Item;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Repository("inMemory")
+@Primary
 public class InMemoryItemDaoImpl implements ItemDao {
 
     private List<Item> itemlist = new ArrayList<>();
